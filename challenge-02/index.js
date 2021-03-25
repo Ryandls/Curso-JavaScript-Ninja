@@ -58,17 +58,15 @@ Crie uma função com as seguintes características:
 */
 
 function treeArgus(x, y, z) {
-  if (x === undefined && y === undefined && z === undefined) {
-    return console.log('Preencha no minimo um valor!');
-  } else if (y == null && z == null) {
+  if (x !== undefined && y === undefined && z === undefined) {
     return x;
-  } else if (z == null) {
+  } else if (x !== undefined && y !== undefined && z === undefined) {
     return x + y;
-  } else if (x !== null && y !== null && z !== null) {
+  } else if (x !== undefined && y !== undefined && z !== undefined) {
     return (x + y) / z;
-  } else {
-    return console.log('null');
-  }
+  } else if (x === undefined && y !== undefined && z === undefined) {
+    return false;
+  } else return console.log('null');
 }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
